@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -127,7 +128,15 @@ export default function Portfolio() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
           {filteredProjects.map((project, index) => (
             <article key={project.title} className="fade-in-up portfolio-item glass-panel" style={{ transitionDelay: `${index * 0.05}s` }}>
-              <img src={project.image} alt={project.title} className="w-full h-52 sm:h-56 lg:h-60 object-cover" />
+              <div className="relative w-full h-52 sm:h-56 lg:h-60">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="portfolio-overlay">
                 <h3 className="font-display text-white text-lg">{project.title}</h3>
                 <button onClick={() => setActiveProject(project)} className="mt-3 text-left text-sm text-primary-300 hover:text-primary-200">
@@ -141,7 +150,15 @@ export default function Portfolio() {
         {activeProject && (
           <div className="modal-backdrop" onClick={() => setActiveProject(null)}>
             <div className="modal-card" onClick={(event) => event.stopPropagation()}>
-              <img src={activeProject.image} alt={activeProject.title} className="w-full h-72 sm:h-96 object-cover" />
+              <div className="relative w-full h-72 sm:h-96">
+                <Image
+                  src={activeProject.image}
+                  alt={activeProject.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 960px"
+                  className="object-cover"
+                />
+              </div>
               <div className="p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-6">
                   <div>

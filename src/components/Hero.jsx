@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Hero() {
   return (
     <section className="min-h-[calc(100svh-4rem)] sm:min-h-[calc(100svh-5rem)] lg:min-h-screen flex items-center pt-16 pb-12 sm:pt-20 sm:pb-16 lg:pt-32 lg:pb-28 px-4 sm:px-6 lg:px-8">
@@ -59,10 +61,13 @@ export default function Hero() {
             <div className="relative">
               <div className="avatar-glow"></div>
               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-[23rem] lg:h-[23rem]">
-                <img
+                <Image
                   src="/images/logo/avatar.png"
                   alt="Anton Manaev"
-                  className="w-full h-full object-cover rounded-full relative z-10 border-4 border-background-card"
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 368px"
+                  className="object-cover rounded-full relative z-10 border-4 border-background-card"
                 />
                 <div className="avatar-ring"></div>
               </div>

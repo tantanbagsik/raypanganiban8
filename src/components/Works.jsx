@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 
 const works = [
   {
@@ -60,7 +61,15 @@ export default function Works() {
         <div className="grid lg:grid-cols-3 gap-6 lg:gap-7">
           {works.map((work, index) => (
             <article key={work.title} className="fade-in-up portfolio-item glass-panel" style={{ transitionDelay: `${index * 0.08}s` }}>
-              <img src={work.image} alt={work.title} className="w-full h-56 sm:h-64 lg:h-72 object-cover" />
+              <div className="relative w-full h-56 sm:h-64 lg:h-72">
+                <Image
+                  src={work.image}
+                  alt={work.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
               <div className="portfolio-overlay">
                 <h3 className="font-display text-white text-xl">{work.title}</h3>
                 <p className="text-slate-300 text-sm mt-2">{work.subtitle}</p>
@@ -75,7 +84,15 @@ export default function Works() {
         {activeWork && (
           <div className="modal-backdrop" onClick={() => setActiveWork(null)}>
             <div className="modal-card" onClick={(event) => event.stopPropagation()}>
-              <img src={activeWork.image} alt={activeWork.title} className="w-full h-72 sm:h-96 object-cover" />
+              <div className="relative w-full h-72 sm:h-96">
+                <Image
+                  src={activeWork.image}
+                  alt={activeWork.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 960px"
+                  className="object-cover"
+                />
+              </div>
               <div className="p-6 sm:p-8">
                 <div className="flex items-start justify-between gap-6">
                   <div>

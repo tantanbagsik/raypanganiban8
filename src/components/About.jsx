@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
   return (
     <section id="about" className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
@@ -10,7 +12,14 @@ export default function About() {
 
         <div className="grid lg:grid-cols-[320px_1fr] gap-6 sm:gap-8 items-start">
           <div className="fade-in-up rounded-2xl glass-panel p-6 card-hover" style={{ transitionDelay: '0.1s' }}>
-            <img src="/images/logo/avatar.png" alt="Anton Manaev" className="w-full aspect-square object-cover rounded-xl" />
+            <Image
+              src="/images/logo/avatar.png"
+              alt="Anton Manaev"
+              width={640}
+              height={640}
+              sizes="(max-width: 1024px) 100vw, 320px"
+              className="w-full h-auto aspect-square object-cover rounded-xl"
+            />
             <div className="mt-4 space-y-2 text-sm">
               <p className="text-green-400">Available for Hire</p>
               <p className="text-slate-400">Global Remote</p>
