@@ -10,7 +10,7 @@ export default function Contact() {
           </p>
 
           <div className="mt-8 space-y-4 text-sm">
-            <a className="block text-slate-300 hover:text-white" href="mailto:antonmanaev@mail.com">antonmanaev@mail.com</a>
+            <a className="block text-slate-300 hover:text-white" href="mailto:raypanganiban0825@gmail.com">raypanganiban0825@gmail.com</a>
             <a className="block text-slate-300 hover:text-white" href="https://www.linkedin.com/in/anton-manaev-dev/" target="_blank" rel="noreferrer">LinkedIn</a>
             <a className="block text-slate-300 hover:text-white" href="https://github.com/xglukx" target="_blank" rel="noreferrer">GitHub</a>
             <a className="block text-slate-300 hover:text-white" href="https://t.me/AntonManaevLab" target="_blank" rel="noreferrer">Telegram</a>
@@ -24,7 +24,7 @@ export default function Contact() {
           </label>
           <label className="block text-sm text-slate-300">
             Email Address
-            <input type="email" className="mt-2 w-full rounded-lg border border-slate-700 bg-black/30 px-4 py-3 text-white outline-none focus:border-primary" placeholder="you@example.com" />
+            <input type="email" className="mt-2 w-full rounded-lg border border-slate-700 bg-black/30 px-4 py-3 text-white outline-none focus:border-primary" placeholder="raypanganiban0825@gmail.com" />
           </label>
           <label className="block text-sm text-slate-300">
             Message Payload
