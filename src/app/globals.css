@@ -305,3 +305,230 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+.expertise-shell {
+  position: relative;
+  min-height: 560px;
+  border: 1px solid rgba(30, 58, 138, 0.24);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.16), rgba(5, 8, 18, 0) 40%),
+    radial-gradient(circle at 50% 50%, rgba(96, 165, 250, 0.09), transparent 52%),
+    linear-gradient(180deg, rgba(2, 8, 23, 0.88), rgba(2, 6, 16, 0.95));
+  overflow: hidden;
+}
+
+.expertise-col {
+  width: 34%;
+  position: absolute;
+  top: 1.25rem;
+}
+
+.expertise-col-left {
+  left: 1.25rem;
+}
+
+.expertise-col-right {
+  right: 1.25rem;
+}
+
+.chip-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.chip-grid-right {
+  justify-content: flex-end;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.76rem 1.08rem;
+  border-radius: 999px;
+  color: #e2e8f0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(10, 18, 30, 0.9));
+  border: 1px solid rgba(100, 116, 139, 0.33);
+  font-weight: 600;
+  font-size: 1.05rem;
+  line-height: 1;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 6px 18px rgba(2, 6, 23, 0.5);
+}
+
+.skill-chip-accent-blue {
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.skill-chip-accent-red {
+  border-color: rgba(248, 113, 113, 0.35);
+}
+
+.chip-float {
+  animation: chip-float 4.8s ease-in-out infinite;
+}
+
+@keyframes chip-float {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.expertise-label {
+  font-size: 0.79rem;
+  letter-spacing: 0.28em;
+  margin-top: 1.05rem;
+}
+
+.expertise-label-blue {
+  color: rgba(59, 130, 246, 0.85);
+}
+
+.expertise-label-red {
+  color: rgba(248, 113, 113, 0.88);
+  text-align: right;
+}
+
+.expertise-core-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.expertise-core {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 38% 30%, rgba(148, 163, 184, 0.2), rgba(30, 41, 59, 0.35) 55%, rgba(15, 23, 42, 0.4) 100%);
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.12),
+    0 0 60px rgba(30, 64, 175, 0.35),
+    inset 0 16px 44px rgba(255, 255, 255, 0.04);
+}
+
+.expertise-core-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.7rem;
+  text-align: center;
+}
+
+.expertise-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #3b82f6;
+  box-shadow: 0 0 16px #3b82f6;
+  left: calc(50% - 6px);
+  top: calc(50% - 6px);
+  animation: orbit-dot 6s linear infinite;
+}
+
+@keyframes orbit-dot {
+  from {
+    transform: rotate(0deg) translateX(171px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(171px) rotate(-360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .skill-chip {
+    font-size: 0.95rem;
+    padding: 0.72rem 0.98rem;
+  }
+
+  .expertise-core {
+    width: 300px;
+    height: 300px;
+  }
+
+  @keyframes orbit-dot {
+    from {
+      transform: rotate(0deg) translateX(145px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(145px) rotate(-360deg);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .expertise-shell {
+    min-height: unset;
+    display: grid;
+    gap: 1.4rem;
+  }
+
+  .expertise-col,
+  .expertise-col-left,
+  .expertise-col-right {
+    position: static;
+    width: 100%;
+  }
+
+  .expertise-col-right .chip-grid {
+    justify-content: flex-start;
+  }
+
+  .expertise-label-red {
+    text-align: left;
+  }
+
+  .expertise-core-wrap {
+    position: static;
+    order: -1;
+    padding-top: 0.5rem;
+  }
+
+  .expertise-core {
+    width: 240px;
+    height: 240px;
+  }
+
+  .expertise-dot {
+    animation: orbit-dot-mobile 6s linear infinite;
+  }
+
+  @keyframes orbit-dot-mobile {
+    from {
+      transform: rotate(0deg) translateX(114px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(114px) rotate(-360deg);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .expertise-shell {
+    padding: 1rem;
+  }
+
+  .skill-chip {
+    font-size: 0.88rem;
+    padding: 0.66rem 0.9rem;
+  }
+
+  .expertise-core {
+    width: 210px;
+    height: 210px;
+  }
+
+  .expertise-core-inner p.font-display {
+    font-size: 1.55rem;
+  }
+}
