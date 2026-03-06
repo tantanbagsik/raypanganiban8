@@ -3,6 +3,21 @@ const leftBottom = ['LLMs / GPT', 'LangChain', 'RAG', 'Vector DB', 'AI Agents']
 const rightTop = ['Python / FastAPI', 'Django', 'Node.js', 'PostgreSQL', 'Supabase', 'REST API', 'Docker']
 const rightBottom = ['Figma', '3D Design', 'Mobile-First', 'UI/UX']
 
+const toolInventory = [
+  { id: 'react', label: 'React' },
+  { id: 'nextjs', label: 'Next.js' },
+  { id: 'typescript', label: 'TypeScript' },
+  { id: 'python', label: 'Python' },
+  { id: 'fastapi', label: 'FastAPI' },
+  { id: 'nodejs', label: 'Node.js' },
+  { id: 'tailwind', label: 'Tailwind' },
+  { id: 'docker', label: 'Docker' },
+  { id: 'postgresql', label: 'PostgreSQL' },
+  { id: 'mongodb', label: 'MongoDB' },
+  { id: 'redis', label: 'Redis' },
+  { id: 'openai', label: 'OpenAI' },
+]
+
 function Spark({ color = '#60a5fa' }) {
   return (
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
@@ -21,6 +36,9 @@ function Chip({ label, className = '', icon = null, delay = 0 }) {
 }
 
 export default function Skills() {
+  const toolsRowA = [...toolInventory, ...toolInventory]
+  const toolsRowB = [...toolInventory.slice(5), ...toolInventory.slice(0, 5), ...toolInventory]
+
   return (
     <section id="skills" className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28">
       <div className="max-w-7xl mx-auto">
@@ -86,6 +104,32 @@ export default function Skills() {
               ))}
             </div>
             <p className="expertise-label expertise-label-red mt-4">DESIGN</p>
+          </div>
+        </div>
+
+        <div className="fade-in-up tools-inventory" style={{ transitionDelay: '0.15s' }}>
+          <p className="tools-inventory-title">Tools Inventory</p>
+
+          <div className="tools-marquee">
+            <div className="tools-track">
+              {toolsRowA.map((tool, index) => (
+                <div className="tool-pill" key={`a-${tool.id}-${index}`}>
+                  <img src={`/images/tools/${tool.id}.svg`} alt={tool.label} className="tool-pill-icon" style={{ animationDelay: `${index * 0.08}s` }} />
+                  <span>{tool.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="tools-marquee tools-marquee-reverse mt-4">
+            <div className="tools-track">
+              {toolsRowB.map((tool, index) => (
+                <div className="tool-pill" key={`b-${tool.id}-${index}`}>
+                  <img src={`/images/tools/${tool.id}.svg`} alt={tool.label} className="tool-pill-icon" style={{ animationDelay: `${index * 0.08}s` }} />
+                  <span>{tool.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
