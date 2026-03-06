@@ -1,0 +1,37 @@
+{
+  "name": "Anton Manaev - Full Stack Developer & AI Solutions",
+  "short_name": "AntonManaev",
+  "description": "Crafting intelligent digital ecosystems where human creativity meets artificial intelligence.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#2a6fb6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["portfolio", "business", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+}
