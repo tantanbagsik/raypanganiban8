@@ -1,5 +1,6 @@
 import './globals.css'
 import { Space_Grotesk, Outfit } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const spaceGrotesk = Space_Grotesk({
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-body antialiased bg-background-dark text-slate-200 transition-colors duration-300 overflow-x-hidden selection:bg-primary selection:text-white">
         {children}
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
