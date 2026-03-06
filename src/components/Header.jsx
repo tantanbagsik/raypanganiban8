@@ -33,7 +33,7 @@ export default function Header({ scrolled }) {
               M
             </span>
               <span className="font-display font-bold text-lg text-white hidden sm:block tracking-[0.02em] drop-shadow-sm">
-                Anton Manaev
+                RAY PANGANIBAN
               </span>
             </Link>
 
