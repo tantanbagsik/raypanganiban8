@@ -63,7 +63,7 @@ export default function Hero() {
               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-[23rem] lg:h-[23rem]">
                 <Image
                   src="/images/logo/avatar.png"
-                  alt="Anton Manaev"
+                  alt="Ray Panganiban"
                   fill
                   priority
                   sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 368px"

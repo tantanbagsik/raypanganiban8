@@ -16,10 +16,10 @@ const outfit = Outfit({
 })
 
 export const metadata = {
-  title: 'Anton Manaev - Full Stack Developer, AI & Automation Solutions',
+  title: 'Ray Panganiban - Full Stack Developer, AI & Automation Solutions',
   description: 'Crafting intelligent digital ecosystems where human creativity meets artificial intelligence. 17+ years of experience in full-stack development, AI integration, and automation solutions.',
-  keywords: 'Full Stack Developer,AI Solutions,Automation,Web Development,React,Next.js,Python,FastAPI,Machine Learning,Anton Manaev',
-  author: 'Anton Manaev',
+  keywords: 'Full Stack Developer,AI Solutions,Automation,Web Development,React,Next.js,Python,FastAPI,Machine Learning,Ray Panganiban',
+  author: 'Ray Panganiban',
 }
 
 export const viewport = {
