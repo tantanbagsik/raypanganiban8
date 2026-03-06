@@ -10,49 +10,58 @@ export default function About() {
           <p className="text-slate-400 mt-5 max-w-3xl mx-auto text-lg">This website was built in just 2 days. Imagine what&apos;s possible with more time...</p>
         </div>
 
-        <div className="grid lg:grid-cols-[320px_1fr] gap-6 sm:gap-8 items-start">
-          <div className="fade-in-up rounded-2xl glass-panel p-6 card-hover" style={{ transitionDelay: '0.1s' }}>
-            <Image
-              src="/images/logo/avatar.png"
-              alt="Anton Manaev"
-              width={640}
-              height={640}
-              sizes="(max-width: 1024px) 100vw, 320px"
-              className="w-full h-auto aspect-square object-cover rounded-xl"
-            />
-            <div className="mt-4 space-y-2 text-sm">
-              <p className="text-green-400">Available for Hire</p>
-              <p className="text-slate-400">Global Remote</p>
+        <div className="grid lg:grid-cols-[42%_1fr] gap-5 sm:gap-7 items-stretch">
+          <div className="fade-in-up about-portrait-card" style={{ transitionDelay: '0.1s' }}>
+            <div className="scan-status">Systems Online</div>
+            <div className="scan-frame">
+              <Image
+                src="/images/logo/avatar.png"
+                alt="Ray Panganiban"
+                width={800}
+                height={980}
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="scan-photo"
+              />
+              <div className="scan-line"></div>
+              <div className="scan-vignette"></div>
+            </div>
+            <div className="about-identity">
+              <span className="about-availability">AVAILABLE FOR HIRE</span>
+              <h3 className="font-display text-white text-4xl sm:text-5xl mt-4">Ray Panganiban</h3>
+              <p className="text-slate-300 text-2xl sm:text-3xl mt-2">Global Remote</p>
             </div>
           </div>
 
-          <div className="fade-in-up rounded-2xl glass-panel p-8" style={{ transitionDelay: '0.2s' }}>
-            <p className="text-slate-300 leading-relaxed">
+          <div className="fade-in-up about-detail-card" style={{ transitionDelay: '0.2s' }}>
+            <h3 className="font-display text-white text-4xl sm:text-5xl lg:text-6xl leading-tight mb-8">
+              Architecting the <span className="gradient-text">Intelligent Web</span>
+            </h3>
+            <p className="text-slate-300 leading-relaxed text-lg sm:text-xl">
               I am a <span className="text-white font-semibold">Full Stack Developer</span>, <span className="text-white font-semibold">AI Specialist</span>, and{' '}
               <span className="text-white font-semibold">Designer</span> focused on building the next generation of digital products. My work sits at the intersection
               of elegant code, thoughtful design, and neural automation.
             </p>
-            <p className="text-slate-400 leading-relaxed mt-6">
+            <p className="text-slate-300 leading-relaxed text-lg sm:text-xl mt-6 sm:mt-8">
               With extensive experience in <span className="text-cyan-400">Python</span> and <span className="text-primary">React</span> ecosystems, I don&apos;t just
               build applications-I engineer living systems that learn, adapt, and scale.
             </p>
 
-            <div className="mt-8 grid sm:grid-cols-4 gap-4">
-              <div className="rounded-xl bg-black/30 border border-slate-800 p-4">
-                <p className="font-display text-2xl text-white">17+</p>
-                <p className="text-xs text-slate-400">Years Exp</p>
+            <div className="about-stats-grid mt-8 sm:mt-10">
+              <div>
+                <p className="font-display text-white text-5xl">17+</p>
+                <p className="about-stat-label">YEARS EXP</p>
               </div>
-              <div className="rounded-xl bg-black/30 border border-slate-800 p-4">
-                <p className="font-display text-2xl text-white">300+</p>
-                <p className="text-xs text-slate-400">Projects</p>
+              <div>
+                <p className="font-display text-white text-5xl">100+</p>
+                <p className="about-stat-label">PROJECTS</p>
               </div>
-              <div className="rounded-xl bg-black/30 border border-slate-800 p-4">
-                <p className="font-display text-2xl text-white">24/7</p>
-                <p className="text-xs text-slate-400">Availability</p>
+              <div>
+                <p className="font-display text-white text-5xl">24/7</p>
+                <p className="about-stat-label">AVAILABILITY</p>
               </div>
-              <div className="rounded-xl bg-black/30 border border-slate-800 p-4">
-                <p className="font-display text-2xl text-white">5.0</p>
-                <p className="text-xs text-slate-400">Rating</p>
+              <div>
+                <p className="font-display text-white text-5xl">5★</p>
+                <p className="about-stat-label">RATING</p>
               </div>
             </div>
           </div>

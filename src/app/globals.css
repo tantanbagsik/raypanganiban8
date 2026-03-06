@@ -610,3 +610,181 @@ body {
     padding: 0.5rem 0.7rem;
   }
 }
+
+.about-portrait-card {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  background: linear-gradient(180deg, rgba(11, 18, 32, 0.92), rgba(6, 10, 20, 0.95));
+  min-height: 680px;
+}
+
+.scan-status {
+  position: absolute;
+  z-index: 4;
+  left: -10px;
+  top: 165px;
+  font-size: 0.83rem;
+  letter-spacing: 0.16em;
+  color: #10b981;
+  background: rgba(2, 25, 20, 0.84);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  padding: 0.7rem 0.95rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.14);
+}
+
+.scan-frame {
+  position: relative;
+  height: 100%;
+}
+
+.scan-photo {
+  width: 100%;
+  height: 100%;
+  min-height: 680px;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.03);
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.9), transparent);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.9);
+  animation: portrait-scan 5.8s ease-in-out infinite;
+}
+
+.scan-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -44px;
+  height: 44px;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.14), transparent);
+}
+
+@keyframes portrait-scan {
+  0% {
+    top: 14%;
+  }
+  50% {
+    top: 74%;
+  }
+  100% {
+    top: 14%;
+  }
+}
+
+.scan-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(2, 6, 23, 0.08) 40%, rgba(2, 6, 23, 0.58) 100%),
+    repeating-linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 3px);
+  pointer-events: none;
+}
+
+.about-identity {
+  position: absolute;
+  left: 1.4rem;
+  right: 1.4rem;
+  bottom: 1.25rem;
+  z-index: 5;
+}
+
+.about-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #22c55e;
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  border-radius: 999px;
+  background: rgba(3, 22, 10, 0.8);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.13em;
+}
+
+.about-detail-card {
+  border-radius: 1.6rem;
+  border: 1px solid rgba(71, 85, 105, 0.45);
+  background: linear-gradient(160deg, rgba(10, 17, 33, 0.95), rgba(7, 12, 24, 0.95));
+  padding: 2rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px rgba(2, 6, 23, 0.5);
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(71, 85, 105, 0.33);
+}
+
+.about-stat-label {
+  margin-top: 0.2rem;
+  font-size: 0.83rem;
+  letter-spacing: 0.16em;
+  color: #64748b;
+}
+
+@media (max-width: 1024px) {
+  .about-portrait-card,
+  .scan-photo {
+    min-height: 520px;
+  }
+
+  .about-detail-card {
+    padding: 1.5rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 1.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-portrait-card,
+  .scan-photo {
+    min-height: 460px;
+  }
+
+  .scan-status {
+    top: 120px;
+    left: 0.6rem;
+    font-size: 0.68rem;
+    padding: 0.55rem 0.66rem;
+  }
+
+  .about-identity {
+    left: 1rem;
+    right: 1rem;
+    bottom: 0.9rem;
+  }
+
+  .about-identity h3 {
+    font-size: 2rem;
+  }
+
+  .about-identity p {
+    font-size: 1.2rem;
+  }
+
+  .about-detail-card {
+    padding: 1.2rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-stats-grid p.font-display {
+    font-size: 2.1rem;
+  }
+}
