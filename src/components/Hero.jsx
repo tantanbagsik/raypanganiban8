@@ -60,7 +60,7 @@ export default function Hero() {
               <div className="avatar-glow"></div>
               <div className="relative w-60 h-60 sm:w-80 sm:h-80 lg:w-[23rem] lg:h-[23rem]">
                 <img
-                  src="/images/logo/avatar.jpg"
+                  src="/images/logo/avatar.png"
                   alt="Anton Manaev"
                   className="w-full h-full object-cover rounded-full relative z-10 border-4 border-background-card"
                 />
