@@ -1,18 +1,30 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function ElevenLabsWidget() {
-  useEffect(() => {
-    const script = document.createElement('script')
-    script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed'
-    script.async = true
-    document.head.appendChild(script)
+  const [isLoaded, setIsLoaded] = useState(false)
 
-    return () => {
-      document.head.removeChild(script)
+  useEffect(() => {
+    const loadWidget = () => {
+      const existingScript = document.querySelector('script[src*="elevenlabs"]')
+      if (!existingScript) {
+        const script = document.createElement('script')
+        script.src = 'https://unpkg.com/@elevenlabs/convai-widget-embed'
+        script.async = true
+        script.onload = () => setIsLoaded(true)
+        document.head.appendChild(script)
+      } else {
+        setIsLoaded(true)
+      }
     }
+
+    loadWidget()
   }, [])
+
+  if (!isLoaded) {
+    return null
+  }
 
   return (
     <elevenlabs-convai 
