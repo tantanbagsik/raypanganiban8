@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
       </head>
       <body className="font-body antialiased bg-background-dark text-slate-200 transition-colors duration-300 overflow-x-hidden selection:bg-primary selection:text-white">
-        <elevenlabs-convai agent-id="agent_3b68f10d9e5d5c7e1f5651a9a7" api-key="vck_0Oa7w32RSbQKrsSJ2dsPPJqdemF28XPqQa4FHPXmZMDsCUJiV72Fa87t"></elevenlabs-convai>
+        <elevenlabs-convai agent-id="agent_8101kmpnp2nff0ts5vcrzxxfe16y" api-key="vck_0Oa7w32RSbQKrsSJ2dsPPJqdemF28XPqQa4FHPXmZMDsCUJiV72Fa87t"></elevenlabs-convai>
         {children}
         <Analytics />
         <SpeedInsights />
