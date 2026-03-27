@@ -32,19 +32,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <script
-          id="retell-widget"
-          src="https://dashboard.retellai.com/retell-widget.js"
-          type="module"
-          data-public-key="e275a6465b549f30f83e033a628dee410c951d0cae2d375f5d9bdc7c849bc70b"
-          data-agent-id="agent_b51af9c4e750c82ae3b3715832"
-          data-widget="callback"
-          data-phone-number="+1234567890"
-          data-title="Talk to AI Agent"
-          data-color="#6366f1"
-        ></script>
+        <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
       </head>
       <body className="font-body antialiased bg-background-dark text-slate-200 transition-colors duration-300 overflow-x-hidden selection:bg-primary selection:text-white">
+        <elevenlabs-convai agent-id="agent_3b68f10d9e5d5c7e1f5651a9a7" api-key="vck_0Oa7w32RSbQKrsSJ2dsPPJqdemF28XPqQa4FHPXmZMDsCUJiV72Fa87t"></elevenlabs-convai>
         {children}
         <Analytics />
         <SpeedInsights />
