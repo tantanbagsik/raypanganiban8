@@ -2,6 +2,7 @@ import './globals.css'
 import { Space_Grotesk, Outfit } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import ElevenLabsWidget from './ElevenLabsWidget'
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -33,7 +34,8 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
       </head>
-      <body className="font-body antialiased bg-background-dark text-slate-200 transition-colors duration-300 overflow-x-hidden selection:bg-primary selection:text-white">
+      <ElevenLabsWidget />
+        <body className="font-body antialiased bg-background-dark text-slate-200 transition-colors duration-300 overflow-x-hidden selection:bg-primary selection:text-white">
         {children}
         <Analytics />
         <SpeedInsights />
