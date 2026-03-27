@@ -16,7 +16,7 @@ export default function ElevenLabsWidget() {
 
   return (
     <elevenlabs-convai 
-      agent-id="agent_6501kmp5v1rrec8snxkwnn13q4sr"
+      agent-id="agent_3b68f10d9e5d5c7e1f5651a9a7"
       api-key="vck_0Oa7w32RSbQKrsSJ2dsPPJqdemF28XPqQa4FHPXmZMDsCUJiV72Fa87t"
     ></elevenlabs-convai>
   )
